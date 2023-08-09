@@ -1,0 +1,18 @@
+import { Column, Default, Model, Table } from "sequelize-typescript"
+
+@Table
+export class Tasks extends Model {
+
+    @Column({ unique: true })
+    title: string
+
+    @Column
+    datetime: Date
+
+    @Column
+    priority: string
+
+    @Column
+    description: string
+
+}
